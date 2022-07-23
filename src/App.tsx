@@ -1,13 +1,22 @@
+import styled from "styled-components";
 import Header from "./components/Header.component";
 import Stickers from "./components/Stickers.component"
 
 function App() {
   return (
-    <div>
-      <Header />
+    <>
+    <Header />
+    <MainWrapper>
       <Stickers />
-    </div>
+    </MainWrapper>
+    </>
   );
 }
 
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 32px;
+`
 export default App;
