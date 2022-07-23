@@ -1,5 +1,11 @@
+import Header from "./components/Header.component";
+
 function App() {
-  return <div>oi glacy</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
