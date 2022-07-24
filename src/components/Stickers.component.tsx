@@ -1,22 +1,29 @@
+import { useState } from "react";
 import styled, { css } from "styled-components";
 
 const Stickers = () => {
+  const [isChecked, setIsChecked] = useState<string>('');
+
+  const handleClick = (id: string) => {
+    setIsChecked(id)
+  }
+
   return (
     <Container>
       <Title>Quais stickers?</Title>
       <Item>
-        <Check checked={true}></Check>
-        <input type="checkbox" />
+        <Check checked={isChecked === 'react'}></Check>
+        <input id="react" type="checkbox" onClick={() => setIsChecked('react')} />
         React
       </Item>
       <Item>
-        <Check checked={false}></Check>
-        <input type="checkbox" />
+        <Check checked={isChecked === 'vue'}></Check>
+        <input id="vue" type="checkbox" onClick={() => setIsChecked('vue')} />
         Vue
       </Item>
       <Item>
-        <Check checked={false}></Check>
-        <input type="checkbox" />
+        <Check checked={isChecked === 'angular'}></Check>
+        <input id="angular" type="checkbox" onClick={() => setIsChecked('angular')} />
         Angular
       </Item>
     </Container>
@@ -73,8 +80,8 @@ const Check = styled.span<{ checked: boolean }>`
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
     ${({ checked }) =>
-      checked &&
-      css`
+    checked &&
+    css`
         display: block;
       `}
   }
