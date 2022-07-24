@@ -47,6 +47,9 @@ const Item = styled.label`
     opacity: 0;
     cursor: 0;
   }
+
+  > span {
+  }
 `;
 
 const Check = styled.span<{ checked: boolean }>`
@@ -74,6 +77,12 @@ const Check = styled.span<{ checked: boolean }>`
       css`
         display: block;
       `}
+  }
+  :hover {
+    background-color: #191847;
+  }
+  :disabled {
+    background-color: #c5cfd6;
   }
 `;
 

@@ -3,11 +3,11 @@ import Comments from "./components/Comments.component";
 import Counter from "./components/Counter.component";
 import Footer from "./components/Footer.component";
 import Header from "./components/Header.component";
-import Stickers from "./components/Stickers.component"
+import Stickers from "./components/Stickers.component";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
       <MainWrapper>
         <Stickers />
@@ -15,7 +15,7 @@ function App() {
         <Comments />
       </MainWrapper>
       <Footer />
-    </>
+    </div>
   );
 }
 
@@ -24,5 +24,5 @@ const MainWrapper = styled.div`
   flex-direction: column;
   row-gap: 32px;
   padding: 32px;
-`
+`;
 export default App;
