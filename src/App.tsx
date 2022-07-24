@@ -1,14 +1,16 @@
 import styled from "styled-components";
+import Counter from "./components/Counter.component";
 import Header from "./components/Header.component";
 import Stickers from "./components/Stickers.component"
 
 function App() {
   return (
     <>
-    <Header />
-    <MainWrapper>
-      <Stickers />
-    </MainWrapper>
+      <Header />
+      <MainWrapper>
+        <Stickers />
+        <Counter />
+      </MainWrapper>
     </>
   );
 }
