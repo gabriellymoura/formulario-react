@@ -1,13 +1,27 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const Counter = () => {
+
+  const [count, setCount] = useState<number>(0);
+
+  const decrementarContador = () => {
+    setCount(count - 1)
+  };
+
+  const incrementarContador = () => {
+    setCount(count + 1)
+  };
+  
   return (
     <Container>
       <Title>Quantos stickers de cada?</Title>
       <CounterWrapper>
-        <ButtonCounter>-</ButtonCounter>
-        <DisplayCounter>100</DisplayCounter>
-        <ButtonCounter>+</ButtonCounter>
+        <ButtonCounter onClick={decrementarContador}>-</ButtonCounter>
+        <DisplayCounter> 
+          { count }
+        </DisplayCounter>
+        <ButtonCounter onClick={incrementarContador}>+</ButtonCounter>
       </CounterWrapper>
     </Container>
   );
