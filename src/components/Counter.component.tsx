@@ -27,7 +27,7 @@ const Title = styled.p`
 
 const ButtonCounter = styled.button`
   all: unset;
-  background-color: #2F3676;
+  background-color: #2f3676;
   color: white;
   border-radius: 10px;
   width: 42px;
@@ -43,15 +43,15 @@ const ButtonCounter = styled.button`
   }
 
   :disabled {
-    background-color: #C5CFD6;
+    background-color: #c5cfd6;
   }
 `;
 
 const DisplayCounter = styled.div`
   width: 60px;
   height: 42px;
-  background-color: #DDE3E9;
-  border: 1px #2F3676 solid;
+  background-color: #dde3e9;
+  border: 1px #2f3676 solid;
   display: flex;
   justify-content: center;
   align-items: center;
